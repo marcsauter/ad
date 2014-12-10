@@ -1,7 +1,3 @@
-// Copyright 2014 The Go Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 // Package ad provides Microsoft AD specific stuff
 package ad
 
@@ -13,9 +9,7 @@ import (
 	"strings"
 )
 
-// SIDFromString creates a SID (Microsoft Security Identifier)
-// from its string representation.
-// It returns the SID as []byte
+// SIDFromString creates a SID (Microsoft Security Identifier) from its string representation.
 func SIDFromString(sid string) ([]byte, error) {
 	// TODO: check for valid sid ... what is valid?
 	buf := new(bytes.Buffer)
@@ -37,9 +31,7 @@ func SIDFromString(sid string) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-// SIDToString creates the string
-// representation of a SID (Microsoft Security Identifier)
-// It returns the SID as string
+// SIDToString creates the string representation of a SID (Microsoft Security Identifier)
 func SIDToString(sid []byte) (string, error) {
 	// TODO: check for valid sid ... what is valid?
 	buf := new(bytes.Buffer)
