@@ -9,7 +9,9 @@ import (
 	"strings"
 )
 
-// SIDFromString creates a SID (Microsoft Security Identifier) from its string representation.
+// SIDFromString creates a SID (Microsoft Security Identifier)
+// from its string representation.
+// It returns the SID as []byte
 func SIDFromString(sid string) ([]byte, error) {
 	// TODO: check for valid sid ... what is valid?
 	buf := new(bytes.Buffer)
@@ -31,7 +33,9 @@ func SIDFromString(sid string) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-// SIDToString creates the string representation of a SID (Microsoft Security Identifier)
+// SIDToString creates the string
+// representation of a SID (Microsoft Security Identifier)
+// It returns the SID as string
 func SIDToString(sid []byte) (string, error) {
 	// TODO: check for valid sid ... what is valid?
 	buf := new(bytes.Buffer)
